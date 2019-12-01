@@ -24,7 +24,7 @@ class RequestSessionHandler extends ArrayObject {
    * Get a session array reference
    * @return array The session array
    */
-  private function &get_session_array() : array {
+  private function &get_session_array() {
     return $_SESSION;
   }
 }

@@ -11,7 +11,7 @@ namespace FlashPHP\utils;
  * @package FlashPHP\utils
  */
 class ArrayObject {
-  protected ?array $assoc_array;
+  protected $assoc_array;
 
 
   /**

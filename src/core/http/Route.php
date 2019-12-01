@@ -4,6 +4,9 @@
 namespace FlashPHP\core\http;
 
 use Closure;
+use FlashPHP\core\http\request\Request;
+use FlashPHP\core\http\response\Response;
+use FlashPHP\utils\ArrayUtil;
 
 
 
@@ -53,6 +56,14 @@ class Route {
    * @param array $parameters The url parameters for the current route
    */
   public function run(array $parameters) {
-    ($this->callback)();
+    $parameters = ArrayUtil::combine_key_value($this->params, $parameters);
+
+    // Handle middleware
+    foreach($this->middleware as $middleware) {
+      if (!$middleware())
+        (new Response())->end("Middleware blocks you from this route");
+    }
+
+    ($this->callback)(new Request($parameters), new Response());
   }
 }

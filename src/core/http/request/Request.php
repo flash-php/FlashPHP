@@ -17,7 +17,7 @@ class Request {
   public RequestSessionHandler $session;
   public RequestCookieHandler $cookie;
   public RequestFileHandler $files;
-  public ArrayObject $parameters;
+  public ArrayObject $params;
 
 
   /**
@@ -29,6 +29,6 @@ class Request {
     $this->session = new RequestSessionHandler();
     $this->cookie = new RequestCookieHandler();
     $this->files = new RequestFileHandler();
-    $this->parameters = new ArrayObject($parameters);
+    $this->params = new ArrayObject($parameters);
   }
 }

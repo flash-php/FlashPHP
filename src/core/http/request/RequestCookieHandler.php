@@ -24,7 +24,7 @@ class RequestCookieHandler extends ArrayObject {
    * Get a cookie array reference
    * @return array The cookie array
    */
-  private function &get_cookie_array() : array {
+  private function &get_cookie_array() {
     return $_COOKIE;
   }
 
