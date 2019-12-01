@@ -18,4 +18,9 @@ class Config {
 
   // Router
   public static string $ROUTER_URL_PARAMETER = 'route';
+  public static int $MAIN_ROUTE_INDEX = 0;
+  public static int $SUB_ROUTE_INDEX = 1;
+  public static int $ROUTE_PARAMETER_INDEX = 2;
+  public static string $DEFAULT_MAIN_ROUTE = 'home';
+  public static string $DEFAULT_SUB_ROUTE = 'index';
 }
