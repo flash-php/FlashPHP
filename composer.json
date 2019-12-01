@@ -2,12 +2,17 @@
     "name": "ingoandelhofs/flash-php",
     "description": "An advanced php framework that handles all of the common backend tasks.",
     "type": "project",
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Ingo Andelhofs",
             "email": "developer@ingoandelhofs.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "FlashPHP\\": "src/"
+        }
+    },
     "require": {}
 }
