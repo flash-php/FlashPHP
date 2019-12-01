@@ -23,4 +23,24 @@ class HttpHandler {
 
     return $_POST['REQUEST_METHOD'] ?? 'POST';
   }
+
+
+  /**
+   * Get the body of the current request type
+   * @return array The request body
+   */
+  public static function &get_request_body() : array {
+    switch ($_SERVER['REQUEST_METHOD']) {
+      case 'GET':
+        return $_GET;
+      case 'POST':
+        unset($_POST['REQUEST_METHOD']);
+        return $_POST;
+      case 'PUT':
+        parse_str(file_get_contents('php://input'), $_PUT);
+        return $_PUT;
+      default:
+        return [];
+    }
+  }
 }
