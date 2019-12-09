@@ -31,8 +31,8 @@ class File {
 
   /**
    * File constructor.
-   * @param string $file_name
-   * @throws FileException
+   * @param string $file_name The name of the file
+   * @throws FileException If the file doesn't exist
    */
   public function __construct(string $file_name) {
     $file_name ??= 'filename';
