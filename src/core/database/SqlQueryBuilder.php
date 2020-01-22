@@ -13,7 +13,6 @@ namespace FlashPHP\core\database;
 class SqlQueryBuilder {
   private array $query_parts;
   private int $prepare_counter;
-
   private string $query;
 
 

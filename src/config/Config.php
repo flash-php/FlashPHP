@@ -23,4 +23,14 @@ class Config {
   public static int $ROUTE_PARAMETER_INDEX = 2;
   public static string $DEFAULT_MAIN_ROUTE = 'home';
   public static string $DEFAULT_SUB_ROUTE = 'index';
+
+  // Database
+  public static string $DB_DRIVER = 'mysql';
+  public static string $DB_PORT = '3306';
+  public static string $DB_HOST = 'localhost';
+  public static string $DB_NAME = 'dbname';
+  public static string $DB_USERNAME = 'root';
+  public static string $DB_PASSWORD = 'root';
+  public static string $DB_CHAR = 'UTF8';
+
 }

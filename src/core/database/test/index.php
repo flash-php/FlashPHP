@@ -1,6 +1,7 @@
 <?php
 
 
+use FlashPHP\core\database\SQLDatabase;
 use FlashPHP\core\database\SqlQueryBuilder;
 
 include '../SqlQueryBuilder.php';
@@ -46,5 +47,9 @@ $builder
   ->table('User')
   ->where(['id' => 5, 'firstname' => 'ingo'])
   ->delete();
+
+
+
+SQLDatabase::getUserById();
 
 print('</pre>');
